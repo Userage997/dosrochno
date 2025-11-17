@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Заголовок */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+}
+
+.title {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* Карточки */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+    animation: slideInUp 1s ease;
+}
+
+.support-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    border-left: 5px solid #4ecdc4;
+}
+
+/* Анимация сердца */
+.heart-animation {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Основное сообщение */
+.main-message {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Главный подарок */
+.gift-main {
+    margin: 30px 0;
+}
+
+.gift-button {
+    background: linear-gradient(135deg, #ff6b6b, #ffd93d);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+    border: 3px solid transparent;
+}
+
+.gift-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+    text-decoration: none;
+    color: white;
+    border-color: #ffffff;
+}
+
+.gift-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.gift-button h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.gift-button p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.gift-description {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.gift-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gift-description li {
+    padding: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* Поддерживающий раздел */
+.encouragement {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.encouragement p {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+/* Кнопка мотивации */
+.motivation-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    color: #667eea;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.motivation-btn:hover {
+    background: white;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.motivation-message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Конфетти */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .gift-button {
+        padding: 20px;
+    }
+    
+    .gift-button h4 {
+        font-size: 1.5rem;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
