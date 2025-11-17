@@ -250,3 +250,107 @@ body {
 .hidden {
     display: none !important;
 }
+/* Добавь эти стили в конец твоего CSS файла */
+
+/* Исправления для предотвращения наложения текста */
+.gift-section {
+    margin: 30px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.gift-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.gift-description-text {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.gift-details {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.gift-what {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.gift-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gift-list li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* Поддерживающий раздел */
+.support-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.support-text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.support-emphasis {
+    color: #4ecdc4;
+    font-style: italic;
+}
+
+.encouragement-item {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Мотивационный раздел */
+.motivation-text {
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Убедимся, что все элементы имеют правильные отступы */
+.card, .support-card, .gift-main {
+    margin: 25px 0;
+}
+
+/* Дополнительные гарантии против наложения */
+.container > section {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Улучшенные отступы для мобильных устройств */
+@media (max-width: 768px) {
+    .container > section {
+        margin-bottom: 30px;
+    }
+    
+    .gift-details {
+        padding: 15px;
+    }
+    
+    .gift-list li {
+        padding: 6px 0;
+        font-size: 0.9rem;
+    }
+}
