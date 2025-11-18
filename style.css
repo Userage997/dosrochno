@@ -32,12 +32,6 @@ body {
     margin-bottom: 15px;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-style: italic;
-}
-
 /* Карточки */
 .card {
     background: rgba(255, 255, 255, 0.95);
@@ -272,10 +266,6 @@ body {
     
     .title {
         font-size: 2.2rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
     }
     
     .card {
