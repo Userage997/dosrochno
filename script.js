@@ -3,7 +3,7 @@ function createConfetti() {
     const container = document.getElementById('confetti-container');
     const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#ffd93d', '#95e1d3'];
     
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 50; i++) {
         const confetti = document.createElement('div');
         confetti.className = 'confetti';
         confetti.style.left = Math.random() * 100 + 'vw';
@@ -23,7 +23,6 @@ function showMotivation() {
     
     motivationMessage.classList.remove('hidden');
     button.style.display = 'none';
-    
     createConfetti();
 }
 
@@ -39,30 +38,11 @@ function animateHeart() {
     }, 800);
 }
 
-// Инициализация при загрузке страницы
+// Инициализация
 document.addEventListener('DOMContentLoaded', function() {
-    // Запускаем анимацию сердца
     animateHeart();
-    
-    // Создаем начальное конфетти
     setTimeout(createConfetti, 1000);
     
-    // Добавляем конфетти при клике на подарок
     const giftButton = document.querySelector('.gift-button');
-    giftButton.addEventListener('click', function() {
-        createConfetti();
-    });
-    
-    // Добавляем плавное появление элементов
-    const elements = document.querySelectorAll('.card, .support-card');
-    elements.forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-            element.style.transition = 'all 0.6s ease';
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }, 300 + (index * 200));
-    });
+    giftButton.addEventListener('click', createConfetti);
 });
